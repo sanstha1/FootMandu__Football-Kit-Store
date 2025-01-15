@@ -1,13 +1,14 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .Container{
     width: 100%;
     height: 100vh;
     background: white;   
     position: fixed; 
+    background-color: beige;
 }
 .Header{
     position: fixed;
@@ -20,7 +21,7 @@
 .imagecontainer{
     display: flex;
     position: absolute;
-    margin-right: 930px;
+    margin-right: 1100px;
     gap: 10px;
     cursor: pointer;
 }
@@ -28,6 +29,13 @@
     height: 90px;
     width: auto;
 }
+.logoname{
+    display: flex;
+    position: relative;
+    margin-right: 855px;
+    margin-top: 30px;
+}
+
 .user{
     margin-top: 10px;
     margin-right: 20px;
@@ -36,11 +44,12 @@
 .girlimage{
     display: flex;
     position: absolute;
-    margin-left: 190px;
-    margin-top: 190px;
+    margin-left: 180px;
+    margin-top: 210px;
 }
 .girlimage img{
-    height: 430px;
+    height: 350px;
+    width: 350px;
 }
 
 .Information{
@@ -67,10 +76,6 @@
     font-weight: 200;
     line-height: 25px;
     color: black;
-    text-shadow: 0 0 10px rgb(12, 16, 16),
-    0 0 20px rgb(9, 14, 14),
-    0 0 40px rgb(13, 19, 19),
-    0 0 80px rgb(6, 9, 9);
 }
 button{
     position: relative;
@@ -85,4 +90,7 @@ button{
     cursor: pointer;
     background: transparent;
     
+}
+button:hover {
+    background-color: rgba(0,0,0,0.1);
 }

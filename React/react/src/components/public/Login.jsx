@@ -22,7 +22,6 @@ function Login() {
       </div>
       <div className="form">
         <form>
-        {/* <form onSubmit={(e) => e.preventDefault()}> */}
           <h1>LOG IN</h1>
           <input
             type="email"

@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: beige;
+
+  }
+  
+  .Container {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .Header {
+    position: fixed;
+    display: flex;
+    width: 96%;
+    margin: 18px;
+    margin-top: 30px;
+    justify-content: flex-end;
+  }
+  
+  .imagecontainer {
+    display: flex;
+    position: absolute;
+    margin-right: 1100px;
+    gap: 10px;
+    cursor: pointer;
+  }
+  
+  .imagecontainer img {
+    height: 90px;
+    width: auto;
+  }
+  
+  .logoname {
+    display: flex;
+    position: relative;
+    margin-right: 855px;
+    margin-top: 30px;
+    font-size: 9px;
+    color: black;
+  }
+  
+  .user {
+    margin-top: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  
+  .girlimage {
+    display: flex;
+    position: absolute;
+    margin-left: 180px;
+    margin-top: 210px;
+  }
+  
+  .girlimage img {
+    height: 350px;
+    width: 350px;
+  }
+  
+  .Information {
+    width: 40%;
+    position: absolute;
+    top: 55%;
+    margin-left: 670px;
+    transform: translateY(-50%);
+    text-align: center;
+    color: black;
+  }
+  
+  .Information h1 {
+    font-size: 20px;
+    margin-top: 80px;
+    text-transform: uppercase;
+  }
+  
+  .Information p {
+    margin: 20px auto;
+    font-weight: 200;
+    line-height: 25px;
+    color: black;
+  }
+  
+  button {
+    position: relative;
+    width: 150px;
+    padding: 10px 10px;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid black;
+    color: black;
+    cursor: pointer;
+    background: transparent;
+  }
+  
+  button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 2px solid black;
+    
+  }
+  

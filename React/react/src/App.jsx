@@ -6,6 +6,7 @@ const Dashboard = lazy(() => import('./components/public/Dashboard.jsx'));
 const Forgotpassword = lazy(() => import('./components/public/Forgotpassword.jsx'));
 const Mainpage = lazy(() => import('./components/public/Mainpage.jsx'));
 const Cart = lazy(() => import('./components/public/Cart.jsx'));
+const Booknow = lazy(() => import('./components/public/Booknow.jsx'));
 
 
 function App() {
@@ -13,12 +14,14 @@ function App() {
     <Router>
       <Suspense fallback={<div>Loading...</div>}>
       <Routes>
-        <Route path="/" element={<Login />} />
+        {/* <Route path="/" element={<Login />} />
         <Route path='/' element={<Register />} />
         <Route path='/' element={<Dashboard />} />
         <Route path='/' element={<Forgotpassword />} />
         <Route path='/' element={<Mainpage />} />
-        <Route path='/' element={<Cart />} />
+        <Route path='/' element={<Cart />} /> */}
+        <Route path='/' element={<Booknow />} />
+
         
       </Routes>
       </Suspense>

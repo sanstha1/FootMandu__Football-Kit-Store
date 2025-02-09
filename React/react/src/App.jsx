@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import  { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 const Login = lazy(() => import('./components/public/Login.jsx'));
 const Register = lazy(() => import('./components/public/Register.jsx'));
@@ -7,6 +7,7 @@ const Forgotpassword = lazy(() => import('./components/public/Forgotpassword.jsx
 const Mainpage = lazy(() => import('./components/public/Mainpage.jsx'));
 const Cart = lazy(() => import('./components/public/Cart.jsx'));
 const Booknow = lazy(() => import('./components/public/Booknow.jsx'));
+const Bought = lazy(() => import('./components/public/Bought.jsx'));
 
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
         <Route path='/' element={<Forgotpassword />} />
         <Route path='/' element={<Mainpage />} />
         <Route path='/' element={<Cart />} /> */}
-        <Route path='/' element={<Booknow />} />
+        {/* <Route path='/' element={<Booknow />} /> */}
+        <Route path='/' element={<Bought />} />
 
         
       </Routes>

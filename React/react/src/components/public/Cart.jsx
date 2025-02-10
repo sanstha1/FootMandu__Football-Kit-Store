@@ -1,105 +1,92 @@
-import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState } from 'react'
+import {  Link } from 'react-router-dom'
 import '../css/cart.css'
 
 function Cart() {
-  // State to hold the cart items
-  const [cart, setCart] = useState([]);
 
-  // Initialize navigate from react-router-dom
-  const navigate = useNavigate();
-
-  // Load cart from localStorage when the component mounts
-  useEffect(() => {
-    const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
-    // Initialize quantity for each item if not already present
-    const initializedCart = storedCart.map((item) => ({
-      ...item,
-      quantity: item.quantity || 1, // Default quantity is 1
-    }));
-    setCart(initializedCart);
-  }, []);
-
-  // Update localStorage whenever the cart changes
-  useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart));
-  }, [cart]);
-
-  // Handle checkout
-  const handleCheckout = () => {
-    alert('Checkout successful!');
-    localStorage.removeItem('cart');
-    setCart([]); // Clear the cart in state
-  };
-
-  // Handle close button
-  const handleClose = () => {
-    navigate('/'); // Navigate to the home/main page using React Router
-  };
-
-  // Increase quantity of an item
-  const increaseQuantity = (index) => {
-    const updatedCart = cart.map((item, i) =>
-      i === index ? { ...item, quantity: item.quantity + 1 } : item
-    );
-    setCart(updatedCart);
-  };
-
-  // Decrease quantity of an item
-  const decreaseQuantity = (index) => {
-    const updatedCart = cart.map((item, i) =>
-      i === index && item.quantity > 1
-        ? { ...item, quantity: item.quantity - 1 }
-        : item
-    );
-    setCart(updatedCart);
-  };
+    const [formData] = useState({
+        name: '',
+        contactNumber: '',
+        productName: '',
+        quantity: '',
+        price: '',
+      });
 
   return (
-    <div className="Container">
-      <div className="cart">
-        <h1>Cart</h1>
-        <div className="listcart">
-          {cart.length === 0 ? (
-            <p>Your cart is empty.</p>
-          ) : (
-            cart.map((item, index) => (
-              <div className="item" key={index}>
-                <div className="image">
-                  <img src={item.image} alt={item.name} />
-                </div>
-                <div className="name">{item.name}</div>
-                <div className="totalprice">{item.price}</div>
-                <div className="quantity">
-                  <span
-                    className="minus"
-                    onClick={() => decreaseQuantity(index)}
-                  >
-                    &lt;
-                  </span>
-                  <span>{item.quantity}</span>
-                  <span
-                    className="plus"
-                    onClick={() => increaseQuantity(index)}
-                  >
-                    &gt;
-                  </span>
-                </div>
-              </div>
-            ))
-          )}
-        </div>
-        <div className="btn">
-          <button className="close" onClick={handleClose}>
-            CLOSE
-          </button>
-          <button className="checkOut" onClick={handleCheckout}>
-            Check Out
-          </button>
-        </div>
-      </div>
+    <div className='container'>
+    <div className='back'>
+    <Link to="/login"><img src="/Images/arrow.jpg" alt="back" /></Link>
     </div>
-  );
+    <div className="logout">
+      <Link to="/login"><img src="/Images/logout.png" alt="logout" /></Link>
+    </div>
+    <form autoComplete="off" >
+      <div>
+        <label>Name</label>
+        <input
+          type="text"
+          name="name"
+        />
+      </div>
+      <div>
+        <label>Phone Number</label>
+        <input
+          type="text"
+          name="contactNumber"
+        />
+      </div>
+      <div>
+        <label>Product Name</label>
+        <input
+          type="text"
+          name="productName"
+        />
+      </div>
+      <div>
+        <label>Quantity</label>
+        <input
+          type="Number"
+          name="quantity"
+        />
+      </div>
+
+      <div>
+        <label>Price</label>
+        <input
+          type="number"
+          name="price"          
+        />
+      </div>
+      <div className="button">
+        <input type="submit" value="Buy Now"/>
+        <input type="reset" value="Clear"  />
+      </div>
+    </form>
+    <div className='scroll-table'>
+    <table className="list">
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{formData.productName}</td>
+          <td>{formData.quantity}</td>
+          <td>{formData.price}</td>
+          <td>
+            <button>Checkout</button>
+            <button>Remove</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+  )
 }
 
-export default Cart;
+export default Cart

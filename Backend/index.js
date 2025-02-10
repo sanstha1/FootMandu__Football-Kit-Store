@@ -3,6 +3,7 @@ import bodyParser from "body-parser";
 import { db } from "./database/db.js";
 import {userRouter} from "./routes/index.js";
 import { productRouter } from "./routes/index.js";
+import { cartRouter } from "./routes/index.js";
 
 
 import dotenv from "dotenv";

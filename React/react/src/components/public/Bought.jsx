@@ -58,7 +58,7 @@ function Bought() {
         </div>
         <div className="button">
           <input type="submit" value="Update"/>
-          <input type="reset" value="Reset"  />
+          <input type="reset" value="Clear"  />
         </div>
       </form>
       <div className='scroll-table'>

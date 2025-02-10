@@ -5,9 +5,9 @@ const Register = lazy(() => import('./components/public/Register.jsx'));
 const Dashboard = lazy(() => import('./components/public/Dashboard.jsx'));
 const Forgotpassword = lazy(() => import('./components/public/Forgotpassword.jsx'));
 const Mainpage = lazy(() => import('./components/public/Mainpage.jsx'));
-const Cart = lazy(() => import('./components/public/Cart.jsx'));
 const Booknow = lazy(() => import('./components/public/Booknow.jsx'));
 const Bought = lazy(() => import('./components/public/Bought.jsx'));
+const Cart = lazy(() => import('./components/public/Cart.jsx'));
 
 
 function App() {
@@ -20,9 +20,9 @@ function App() {
         <Route path='/' element={<Dashboard />} />
         <Route path='/' element={<Forgotpassword />} />
         <Route path='/' element={<Mainpage />} />
-        <Route path='/' element={<Cart />} /> */}
         {/* <Route path='/' element={<Booknow />} /> */}
-        <Route path='/' element={<Bought />} />
+        {/* <Route path='/' element={<Bought />} /> */}
+        <Route path='/' element={<Cart />} />
 
         
       </Routes>

@@ -78,7 +78,7 @@ ul li a:hover{
     border: 2px solid black;
     text-align: center;
     position: absolute;
-    top: 28%;
+    top: 23%;
     left:35%;
     background:linear-gradient(beige,rgb(165, 206, 207),rgb(208, 208, 160),rgb(177, 153, 153));
 }

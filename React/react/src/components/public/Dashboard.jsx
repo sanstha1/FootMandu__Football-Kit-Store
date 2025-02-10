@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import 'react';
+// import { Link } from 'react-router-dom';
 import '../css/dashboard.css';
 
 function Dashboard() {
@@ -21,11 +21,11 @@ function Dashboard() {
       </div>
       <div className="Information">
         <h1>Gear Up, Step Out, Rule the Pitch!</h1>
-        <p>Quality shouldn't be compromised</p>
-        <button type="button" onClick={() => (window.location.href = '#')}>
+        <p>Quality shouldn&apos;t be compromised</p>
+        <button type="button" onClick={() => (window.location.href = '/login')}>
           LOG IN
         </button>
-        <button type="button" onClick={() => (window.location.href = '#')}>
+        <button type="button" onClick={() => (window.location.href = '/register')}>
           REGISTER
         </button>
       </div>

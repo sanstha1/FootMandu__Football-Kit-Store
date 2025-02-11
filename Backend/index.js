@@ -31,6 +31,7 @@ app.use((req, res, next) => {
     '/api/auth/create', 
     '/api/auth/login',   
     '/api/auth/init',   
+    '/api/auth/resetPassword',
   ];
 
   if (publicRoutes.includes(req.path)) {

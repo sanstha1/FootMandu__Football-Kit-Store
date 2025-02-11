@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import  { useEffect, useRef } from 'react';
 import '../css/mainpage.css';
 import { Link } from 'react-router-dom';
 
@@ -32,13 +32,16 @@ function Mainpage() {
             });
         };
 
-        aboutUsLinkRef.current.addEventListener('click', handleAboutUsClick);
-        footerLinkRef.current.addEventListener('click', handleFooterClick);
+        const aboutUsLink = aboutUsLinkRef.current;
+        const footerLink = footerLinkRef.current;
+
+        aboutUsLink.addEventListener('click', handleAboutUsClick);
+        footerLink.addEventListener('click', handleFooterClick);
 
         return () => {
             window.removeEventListener("scroll", handleScroll);
-            aboutUsLinkRef.current.removeEventListener('click', handleAboutUsClick);
-            footerLinkRef.current.removeEventListener('click', handleFooterClick);
+            aboutUsLink.removeEventListener('click', handleAboutUsClick);
+            footerLink.removeEventListener('click', handleFooterClick);
         };
     }, []);
 
@@ -54,13 +57,13 @@ function Mainpage() {
                     <li><a href="#aboutus" id="aboutus-link" ref={aboutUsLinkRef}>About Us</a></li>
                 </ul>
                 <div className="bought">
-                    <img src="./Images/Booked.png" alt="bought" />
+                    <Link to="/bought"><img src="./Images/Booked.png"  alt="bought" /></Link>
                 </div>
                 <div className="cart">
-                    <img src="./Images/cart.jpg" onClick={() => window.location.href = './cart.html'} alt="cart" />
+                    <Link to="/cart"><img src="./Images/cart.jpg"  alt="cart" /></Link>
                 </div>
                 <div className="logout">
-                    <img src="./Images/logout.png" alt="logout" />
+                    <Link to="/login"><img src="./Images/logout.png" alt="logout" /></Link>
                 </div>
             </header>
 
@@ -162,7 +165,7 @@ function Mainpage() {
                 <div className="about2" id="2">
                     <h1>Welcome to Footmandu</h1>
                     <p>Where passion meets the pitch!</p>
-                    <p>Footmandu is Nepal's premier destination for football enthusiasts</p>
+                    <p>Footmandu is Nepal&apos;s premier destination for football enthusiasts</p>
                 </div>
             </div>
 

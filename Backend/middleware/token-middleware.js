@@ -5,7 +5,7 @@ dotenv.config();
 
 export function authenticateToken(req, res, next) {
 
-  const publicRoutes = ["/api/auth/create", "/api/auth/login",'/api/auth/init', ];
+  const publicRoutes = ["/api/auth/create", "/api/auth/login",'/api/auth/init','/api/auth/resetPassword' ];
 
   
   const path = req.path.split('?')[0];

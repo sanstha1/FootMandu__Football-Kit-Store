@@ -71,7 +71,7 @@ html, body {
   /* Table Styling */
 
   .scroll-table {
-    width: 300%;
+    width: 340%;
     max-height: 600px;
     overflow-y: auto;
     border: 1px solid rgb(202, 169, 4);

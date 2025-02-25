@@ -9,6 +9,8 @@ const Booknow = lazy(() => import('./components/public/Booknow.jsx'));
 const Bought = lazy(() => import('./components/public/Bought.jsx'));
 const Cart = lazy(() => import('./components/public/Cart.jsx'));
 const Addtocart = lazy(() => import('./components/public/Addtocart.jsx'));
+const AdminLogin = lazy(() => import('./components/public/AdminLogin.jsx'));
+const AdminBought = lazy(() => import('./components/public/AdminBought.jsx'));
 
 
 function App() {
@@ -24,7 +26,10 @@ function App() {
         <Route path='/booknow' element={<Booknow />} />
         <Route path='/bought' element={<Bought />} />
         <Route path='/cart' element={<Cart />} />        
-        <Route path='/addtocart' element={<Addtocart />} />        
+        <Route path='/addtocart' element={<Addtocart />} />     
+        <Route path='/adminlogin' element={<AdminLogin />} />     
+        <Route path='/adminbought' element={<AdminBought />} />     
+
       </Routes>
       </Suspense>
     </Router>

@@ -1,5 +1,5 @@
 import 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../css/dashboard.css';
 
 function Dashboard() {
@@ -13,7 +13,7 @@ function Dashboard() {
           <h1>FootMandu</h1>
         </div>
         <div className="user">
-          <img src="./Images/icons8-user-48.png" alt="user icon" />
+          <Link to="/adminlogin"><img src="./Images/icons8-user-48.png" alt="admin icon" /></Link>
         </div>
       </div>
       <div className="girlimage">

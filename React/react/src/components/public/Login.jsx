@@ -64,7 +64,7 @@ function Login() {
           <li><button className="button" onClick={() => (window.location.href = '/register')}>SIGN UP</button></li>
         </ul>
         <div className="user">
-          <img src="./Images/icons8-user-48.png" alt="icon" />
+          <Link to="/adminlogin"><img src="./Images/icons8-user-48.png" alt="admin" /></Link>
         </div>
       </div>
       <div className="Form">
